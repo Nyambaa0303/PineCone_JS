@@ -1,8 +1,8 @@
-let score1 = 23;
+let score1 = 123
 let score2 = 108;
-let score3 = 13;
+let score3 = 113;
 
-let score4 = 32;
+let score4 = 132;
 
 let score5 = 91;
 
