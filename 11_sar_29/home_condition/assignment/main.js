@@ -91,6 +91,61 @@ console.log('number4')
 
 console.log(" ")
 
-// number4
+//number4
+//Ajiliin odor amraltiin osor esehiig olooroi
+
+let day = 4
+let dayName;
+switch(day){    
+    case 1: 
+        dayName = 'Monday ajliin Odor'
+    break;
+    case 2: 
+        dayName = 'Tuesday ajliin Odor'
+    break;
+    case 3: 
+        dayName = 'Wednesday ajliin Odor';
+    break;
+    case 4: 
+        dayName = 'Thursday ajliin Odor';
+    break;
+    case 5: 
+        dayName = 'Friday ajliin Odor';
+    break;
+    case 6: 
+        dayName = 'Saturday ajliin Odor';
+    case 7: 
+        dayName = 'Sunday ajliin Odor';
+    break;      
+}
+alert(dayName)
 
 
+console.log(" ")
+
+console.log('number5')
+
+
+console.log(" ")
+
+
+
+/*
+Number 5
+
+Hereglegchees tsag oruulah, tsag tutamd unelgee ogoh skript bicheerei.
+Tuhain huniii tsaling tootsootoi
+*/
+
+
+let hours = (prompt)('Ajillasan tsagaa oruulna uu?');
+let ratePetHour = 28 
+if((hours <= 20) && (bodolt = hours * ratePetHour)){
+    alert(" muu ajilasan bn " +  "Ta" + " " + (hours) + " " + "tsag ajilsan baina \n" + bodolt + '$')
+} else if((hours <= 30) && (bodolt = hours * ratePetHour)){
+    alert(" dund zergiin ajilasan bn " +  "Ta" + " " + (hours) + " " + "tsag ajilsan baina \n" + bodolt + '$')
+}else if((hours <= 40) && (bodolt = hours * ratePetHour)){
+    alert(" mash sain ajilasan bn " +  "Ta" + " " + (hours) + " " + "tsag ajilsan baina \n" + bodolt + '$')
+}else{
+    alert('tanii oruulsan tsag buruu bn')
+}
