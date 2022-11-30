@@ -77,9 +77,9 @@ let yourAge = prompt('Nasaa oruulna uu?')
 let myAge = 31
 
 if(yourAge > myAge){
-    console.log("Ta nadaas ah ym baina.")
+   alert("Ta nadaas ah ym baina.")
 }else{
-    console.log('Ta nadaas duu ym baina.')
+    alert('Ta nadaas duu ym baina.')
 }
 
 
