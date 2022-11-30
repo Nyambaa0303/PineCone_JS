@@ -1,10 +1,10 @@
 let score1 = 123
 let score2 = 108;
-let score3 = 113;
+let score3 = 313;
 
 let score4 = 132;
 
-let score5 = 91;
+let score5 = 291;
 
 let score6 = 110;
 
