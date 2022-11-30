@@ -94,7 +94,7 @@ console.log(" ")
 //number4
 //Ajiliin odor amraltiin osor esehiig olooroi
 
-let day = 4
+let day = Number(prompt('odoroo oruulna uu?'))
 let dayName;
 switch(day){    
     case 1: 
