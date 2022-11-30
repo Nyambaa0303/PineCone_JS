@@ -113,9 +113,10 @@ switch(day){
         dayName = 'Friday ajliin Odor';
     break;
     case 6: 
-        dayName = 'Saturday ajliin Odor';
+        dayName = 'Saturday amraltiin Odor';
+        break;
     case 7: 
-        dayName = 'Sunday ajliin Odor';
+        dayName = 'Sunday amraltiin Odor';
     break;      
 }
 alert(dayName)
