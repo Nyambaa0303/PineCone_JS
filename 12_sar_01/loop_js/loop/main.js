@@ -1,12 +1,12 @@
-// let count = 1;
-// while (count <= 10) {
-//   console.log(count);
-//   count = count + 1;
-// }
+let count = 1;
+while (count <= 10) {
+  console.log(count);
+  count = count + 1;
+}
 
-// for (i = 0; i <= 10; i++) {
-//   console.log(i);
-// }
+for (i = 0; i <= 10; i++) {
+  console.log(i);
+}
 
 const password = 12345678;
 let ternary = `Erh 1`;
