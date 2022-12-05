@@ -1,11 +1,11 @@
-// let n = Number(prompt('toogoo oruulna uu'));
+let n = Number(prompt('toogoo oruulna uu'));
 
-// let i = 0;
+let i = 0;
 
-// while(i < n){
-//     console.log(i);
-//     i++;
-// }
+while(i < n){
+    console.log(i);
+    i++;
+}
 
 // 9 - s ogogdson tsipr hvrtel toog doosh tsuvargaj bich
 
