@@ -79,27 +79,22 @@
 
 // // Ogogdson interval dahi anhnii toog oloh programm bichne uu
 
-let pNum1 = Number(prompt('Toogoo oruulna uu'))
-let pNum2 = Number(prompt('Toogoo oruulna uu'))
+let pNum1 = Number(prompt("Toogoo oruulna uu"));
+let pNum2 = Number(prompt("Toogoo oruulna uu"));
 let primeNumber = 0;
-for(let i = pNum1; i <= pNum2; i++ ){
-  //  console.log(i)
-   for(let j = 2; j < i; j++){
-    //  console.log(j)
-    if(i % j == 0){
-      primeNumber = i % j == 0;
-      // console.log(primeNumber)
-    }if(i[j] == 2){
-      console.log(i + ' ' + 'Anhnii too mun')
-    }else{
-      console.log('Anhnii too bish')
+for (let i = pNum1; i <= pNum2; i++) {
+  for (let j = 1; j <= i; j++) {
+    if (i % j == 0) {
+      primeNumber++;
     }
   }
+  if (primeNumber == 2) {
+    console.log(i + " " + "Anhnii too mun");
+  } else {
+    console.log(i + " " + "Anhnii too bish");
+  }
+  primeNumber = 0;
 }
-
-
-
-
 
 // // N toonii factorial oloh programm bich
 
@@ -116,18 +111,15 @@ for(let i = pNum1; i <= pNum2; i++ ){
 
 // // N too oruulahad tsipruudiin niilberiig ol
 
-
 // let numb = Number(prompt('Toogoo oruulna uu?'));
 // let sum = 0;
 
 // for(let i = 0; i < numb.length; i++){
-  
+
 //   sum = sum + numb[i];
 
-  
 // }
 // console.log(sum)
-
 
 // // N toonii sondgoi too hevleh bolon sondgoi toonii niilberiig ol
 
@@ -155,4 +147,3 @@ for(let i = pNum1; i <= pNum2; i++ ){
 //   }
 // }
 // console.log(evenSum)
-
