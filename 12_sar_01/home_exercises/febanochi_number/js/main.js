@@ -1,8 +1,7 @@
-let n = Number(prompt('Toogoo oruulna uu'))
-let m = 0;
+let n = Number(prompt("Toogoo oruulna uu"));
 
-for(i = 1; i <= n; i++){
-    if(m ==1){
-        m = n;
-    }
+if (n == 0 && n == 1) {
+
+}else{
+    for()
 }
