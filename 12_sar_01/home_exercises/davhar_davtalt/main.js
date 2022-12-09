@@ -1,14 +1,8 @@
 let num = 5;
-let output = "";
-
-for (i = 1; i <= num; i++) {
-  for (let j = 1; j <= num; j++) {
-    output += "1 ";
+let m = 0;
+for (let i = 1; i <= num; i++) {
+  for (j = 1; j <= i; j++) {
+    m = j + 1;
+    console.log(i);
   }
-  for (k = 1; k < num; k++) {
-    output += " ";
-  }
-  output += "\n";
 }
-
-console.log(output);
