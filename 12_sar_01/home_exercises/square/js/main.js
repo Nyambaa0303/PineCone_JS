@@ -2,9 +2,9 @@
 let n = 5;
 let result = "";
 
-for (i = 0; i <= n; i++) {
-  if (i == 0 || i == n) {
-    for (j = 0; j < n; j++) {
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j < n; j++) {
+    if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
       result += "* ";
     }
   }
