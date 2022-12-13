@@ -4,7 +4,7 @@ myJsDom.style.color = "red";
 myJsDom.style.textAlign = "center";
 
 let test = document.getElementById("text");
-test.innerHTML = "JS DOM";
+test.innerHTML = "JS DOM :  DOCUMENT OBJECT MODEL";
 test.style.backgroundColor = "aqua";
 test.style.textAlign = "center";
 
