@@ -18,6 +18,8 @@ function addTaskAdd(){
 
     newTask.append(newTaskBodyText);
     taskListEl.append(newTask);
+    taskInputEl.value = '';
+
 
     
     // taskListEl.append(test.innerHTML)
