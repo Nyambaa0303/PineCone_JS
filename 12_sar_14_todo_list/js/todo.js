@@ -2,6 +2,8 @@ const taskInputEl = document.getElementById("taskInput");
 
 const buttonEl = document.getElementById("btn");
 const taskListEl = document.getElementById("taskList");
+const date = Date();
+console.log(date)
 
 function addTask() {
   addTaskAdd();
