@@ -2,8 +2,8 @@ const taskInputEl = document.getElementById("taskInput");
 
 const buttonEl = document.getElementById("btn");
 const taskListEl = document.getElementById("taskList");
-const deleteButton = document.getElementsByClassName('btn delete')
-document.getElementById('date').innerHTML = "Он сар өдөр : " + new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + '-' + (new Date().getDay() + 11);
+const deleteButton = document.getElementById('buttonDelete')
+document.getElementById('date').innerHTML = "Он сар өдөр : " + new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + '-' + (new Date().getDate());
 
 function addTask() {
   addTaskAdd();
