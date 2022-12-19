@@ -1,0 +1,15 @@
+<script>
+  function uploadImage(path, i, callback) {
+    setTimeout(function () {
+      console.log(path);
+      callback();
+    }, i * 1000);
+  }
+
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+    uploadImage(`zam/${i}`, i, function () {
+      console.log("finished uploading", i);
+    });
+  }
+</script>

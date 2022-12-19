@@ -1,0 +1,27 @@
+<script>
+  function sum(a, b, callback) {
+    const c = a + b;
+    callback(c);
+  }
+
+  function displayInLog(text) {
+    console.log(text);
+  }
+
+  function displayInAlert(text) {
+    alert(text);
+  }
+
+  sum(12, 34, displayInLog);
+  sum(123, 33, displayInAlert);
+
+  // callback hell
+
+  sum(12, 23, function (niilber) {
+    sum(niilber, 12, function (niilber2) {
+      sum(niilber2, 34, function (niilber3) {
+        document.write(niilber3);
+      });
+    });
+  });
+</script>
