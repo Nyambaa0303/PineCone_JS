@@ -1,8 +1,7 @@
 const taskInputEl = document.getElementById("taskInput");
-
 const buttonEl = document.getElementById("btn");
 const taskListEl = document.getElementById("taskList");
-const deleteButton = document.getElementById("buttonDelete");
+
 document.getElementById("date").innerHTML =
   "Он сар өдөр : " +
   new Date().getFullYear() +
@@ -16,6 +15,7 @@ function addTask() {
 }
 
 function addTaskAdd() {
+  const sec = new Date().getSeconds();
   if (taskInputEl.value !== "") {
     //   bvten cardiig aguulj baigaa class buyuu tag
     const newTask = document.createElement("div");
@@ -32,7 +32,7 @@ function addTaskAdd() {
 
     //   hamgiin ehnii button uzegnii zuragtai:
     const taskBodyBtn = document.createElement("button");
-    taskBodyBtn.className = "btn";
+    taskBodyBtn.className = "btn toggle";
 
     //   button tovch dotorhi ocin
     const taskButtonIcon = document.createElement("i");
@@ -40,7 +40,7 @@ function addTaskAdd() {
 
     //  hoyr dahi button
     const taskBodyBtn2 = document.createElement("button");
-    taskBodyBtn2.className = "btn";
+    taskBodyBtn2.className = "btn check";
 
     //   button tovch dotorhi ocin
     const taskButtonIcon2 = document.createElement("i");
@@ -48,7 +48,7 @@ function addTaskAdd() {
 
     //  gurav dahi button
     const taskBodyBtn3 = document.createElement("button");
-    taskBodyBtn3.className = "btn";
+    taskBodyBtn3.className = "btn delete";
 
     //   button tovch dotorhi ocin
     const taskButtonIcon3 = document.createElement("i");
@@ -78,8 +78,13 @@ function addTaskAdd() {
     newTask.append(taskBody2);
     taskListEl.append(newTask);
     taskInputEl.value = "";
+    newTask.id = `par${sec}`;
+    taskBodyBtn3.id = `delete${sec}`;
+    
+    updateCount();
   }
 }
 
 buttonEl.addEventListener("click", addTask);
-deleteButton.removeEventListener("click", newTask);
+
+
