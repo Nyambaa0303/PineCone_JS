@@ -80,11 +80,26 @@ function addTaskAdd() {
     taskInputEl.value = "";
     newTask.id = `par${sec}`;
     taskBodyBtn3.id = `delete${sec}`;
-    
+
     updateCount();
   }
 }
 
 buttonEl.addEventListener("click", addTask);
 
+const deleteButton = document.getElementById(`delete${sec}`);
+const deleteTask = document.getElementById(`par${sec}`);
 
+function removeTask(id) {
+  if (confirm("Ustgah uu?")) {
+    document.getElementById(id).remove();
+    updateCount();
+  }
+}
+
+function updateCount() {
+  document.getElementById("countNumber").innerHTML =
+    taskListEl.childNodes.length;
+}
+
+deleteButton.removeEventListener("click", removeTask);
