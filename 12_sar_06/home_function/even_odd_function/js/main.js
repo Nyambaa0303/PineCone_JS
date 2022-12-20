@@ -13,6 +13,7 @@ function numberTwo(){
 numberTwo();
 
 // 2. 2 авсан тоон утгын хоорондох тэгш тоонуудын array буцаадаг 1 function.
+console.log('====Tegsh toog olog===')
 
 function even(){
     let arr=[];
@@ -28,6 +29,8 @@ function even(){
 even();
 
 // 3. 2 авсан тоон утгын хоорондох сондгой тоонуудын array буцаадаг 1 function.
+
+console.log('==== Sondgoi toog oloh====')
 
 function odd(){
     let arr = [];
