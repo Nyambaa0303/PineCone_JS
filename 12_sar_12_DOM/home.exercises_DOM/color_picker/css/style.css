@@ -1,0 +1,57 @@
+.img{
+    margin: auto;
+    width: 40%;
+    height: 50vh;
+    background-color: #DCDCDC;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+.main{
+    margin-top: 80px;
+}
+.buttons{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#btn1{
+    width: 100px;
+    height: 100px;
+    border: 0;
+    background-color: #000000;
+}
+#btn2{
+    width: 100px;
+    height: 100px;
+    background-color: #D2691E;
+    border: 0;
+}
+#btn3{
+    border: 0;
+    width: 100px;
+    height: 100px;
+    background-color: 	#A52A2A;
+}
+#btn4{
+    border: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #483D8B;
+}
+#btn5{
+    border: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #5F9EA0;
+}
+#btn6{
+    border: 0;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
