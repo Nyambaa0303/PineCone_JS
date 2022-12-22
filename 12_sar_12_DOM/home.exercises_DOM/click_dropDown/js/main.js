@@ -1,14 +1,9 @@
-const button = document.getElementById('input');
-const select = document.getElementById('colorSelect');
+const button = document.getElementById("input");
+const selectEl = document.getElementById("colorSelect");
 
-function alert1(){
-    const color = [ulaan, nogoon, tsagaan, har];
-    for(let i = 0; i < color.length; i++){
-        i.value = i.value + i;
-        console.log(i.value)
-    }
-    alert('No. of items : ' + i + '\n' + color[0]);
-}
+alert("No. of items : " + selectEl.length + "\n" + selectEl.innerText);
 
-
-button.addEventListener("click", alert1);
+button.addEventListener("click", () => {
+  selectEl.remove(selectEl.selectedIndex);
+  alert("No. of items : " + selectEl.length + "\n" + selectEl.innerText);
+});

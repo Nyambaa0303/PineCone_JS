@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ol {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <ol id="product"></ol>
+    <script>
+      const productEl = document.getElementById("product");
+      fetch("https://dummyjson.com/products")
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+        })
+
+        .then((products) => {
+          for (let i = 0; i < products.products.length; i++) {
+            const bla = document.createElement("li");
+            bla.innerHTML = `<img src=${products.products[i].thumbnail}>`;
+            productEl.append(bla);
+            console.log(i);
+          }
+        });
+    </script>
+  </body>
+</html>
