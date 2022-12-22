@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const n = 5;
+
+      //   hoyr hemjeest array uusgeh
+      const a = new Array(n);
+      for (let i = 0; i < n; i++) {
+        a[i] = new Array(n);
+      }
+
+      //   ehnii utga
+      a[0][0] = 1;
+
+      // pascaliin gurvaljin uusgeh
+      for (let i = 1; i < n; i++) {
+        for (let j = 0; j < i + 1; j++) {
+          a[i][j] = sum(a[i - 1][j], a[i - 1][j - 1]);
+        }
+      }
+
+      // default valeu in function parameter
+      function sum(a = 0, b = 0) {
+        return a + b;
+      }
+
+      // function sum(a, b){
+      //     if(a === undefined) a = 0;
+      //     if(b === undefined) b = 0;
+
+      //     const c = a + b;
+      //     return c;
+      // }
+
+      // ur dungee hevleh
+      let result = "";
+
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - i - 1; j++) {
+          result += " ";
+        }
+
+        for (let j = 0; j < i + 1; j++) {
+          result = result + a[i][j] + " ";
+        }
+        result += "\n";
+      }
+
+      console.log(result);
+    </script>
+  </body>
+</html>
