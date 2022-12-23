@@ -1,5 +1,5 @@
 const squaretEl = document.getElementById("square");
-let n = 9;
+let n = 10;
 fetch("https://dummyjson.com/products")
   .then((res) => {
     if (res.ok) {
