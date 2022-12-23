@@ -1,12 +1,11 @@
 .container{
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
     margin: auto;
 }
 
 #buttons{
     display: flex;
-    width: 1200px;
 }
 #btn1{
     background-image: url("https://media.istockphoto.com/id/1164815367/photo/milky-way-and-starry-sky-scene-south-china.jpg?b=1&s=170667a&w=0&k=20&c=CKqm8f9zDP5_xFyfU70F46VpejEy7BK4RhcHIGX8-EQ=");
