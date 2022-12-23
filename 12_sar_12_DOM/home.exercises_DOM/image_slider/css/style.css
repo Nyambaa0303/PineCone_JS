@@ -1,0 +1,71 @@
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+#buttons{
+    display: flex;
+    width: 1200px;
+}
+#btn1{
+    background-image: url("https://media.istockphoto.com/id/1164815367/photo/milky-way-and-starry-sky-scene-south-china.jpg?b=1&s=170667a&w=0&k=20&c=CKqm8f9zDP5_xFyfU70F46VpejEy7BK4RhcHIGX8-EQ=");
+    width: 120px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#btn2{
+    background-image: url("https://images.unsplash.com/photo-1488866022504-f2584929ca5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHN0YXIlMjBza3l8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    width: 120px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#btn3{
+    background-image: url("https://media.istockphoto.com/id/157639696/photo/purple-space-stars.jpg?b=1&s=170667a&w=0&k=20&c=Bgm3zyKSNuGa8CwHq3OS3W9ahfCFQrdNfFh4O5RSG-A=");
+    width: 120px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#btn4{
+    background-image: url("https://media.istockphoto.com/id/653506436/photo/lanzarote-night-sky-milky-way.jpg?b=1&s=170667a&w=0&k=20&c=fBYp2QnZ7U5LwaX8J2_8kyQpsv6xvqF4F6tnZn_rRDQ=");
+    width: 120px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#btn5{
+    background-image: url("https://media.istockphoto.com/id/498309616/photo/great-ocean-road-at-night-milky-way-view.jpg?b=1&s=170667a&w=0&k=20&c=q5cmaFOEDmoy3CbVEESWrCvSlZ-WDT1DgRtlEdP0ISE=");
+    width: 120px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+h1{
+    color: rgb(72, 71, 71);
+    text-align: center;
+}
+body{
+    background-color: rgb(178, 182, 185);
+}
