@@ -16,30 +16,28 @@
 }
 
 img {
-  width:250px;
+  width: 250px;
   height: 150px;
   background-color: #dcdcdc;
   border-radius: 10px 10px 0 0;
 }
-#square{
+#square {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 30px;
   column-gap: 30px;
   margin-top: 30px;
-
-  
 }
-.card{
+.card {
   width: 250px;
   height: 350px;
   border: 1px solid rgba(176, 175, 175, 0.568);
   border-radius: 10px;
 }
-h3{
+h3 {
   padding: 0 10px 0px 10px;
 }
-p{
-  padding-left:  10px;
+p {
+  padding-left: 10px;
 }
