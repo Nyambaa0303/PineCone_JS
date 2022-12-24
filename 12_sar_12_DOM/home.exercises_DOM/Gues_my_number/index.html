@@ -8,32 +8,53 @@
     <title>Guess My Number!</title>
   </head>
   <body>
-    <header>
-      <h1>Тоог таа!</h1>
-      <p class="between">(1 ээс 20 хооронд)</p>
-      <button class="btn again" onclick="resetGame()">Шинээр эхлэх!</button>
-      <div class="number">?</div>
-    </header>
-    <main>
-      <section class="left">
-        <input type="number" class="guess" />
-        <button class="btn check" onclick="checkNumber()">Шалгах!</button>
-      </section>
-      <section class="right">
-        <p class="message">Тааж эхлээрэй...</p>
-        <p class="label-score">💯 Оноо: <span class="score">20</span></p>
-        <p class="label-highscore">
-          🥇 Дээд амжилт: <span class="highscore">0</span>
-        </p>
-      </section>
-    </main>
+    <div class="row">
+      <div class="col-10">
+        <header>
+          <h1>Тоог таа!</h1>
+          <p class="between">(1 ээс 100 хооронд)</p>
+          <button class="btn again" onclick="resetGame()">Шинээр эхлэх!</button>
+          <div class="number">?</div>
+        </header>
+        <main>
+          <section class="left">
+            <form action="">
+              <select id="TeamSelect" class="form">
+                <option value="Teal">Teal</option>
+                <option value="Aqua">Aqua</option>
+                <option value="Azure">Azure</option>
+                <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
+                <option value="Black">Black</option>
+              </select>
+            </form>
+
+            <input type="Name" class="Name" />
+            <input type="number" class="guess" />
+            <button class="btn check" onclick="checkNumber()">Шалгах!</button>
+          </section>
+          <section class="right">
+            <p class="message">Тааж эхлээрэй...</p>
+            <p class="label-score">💯 Оноо: <span class="score">20</span></p>
+            <p class="label-highscore">
+              🥇 Дээд амжилт: <span class="highscore">0</span>
+            </p>
+          </section>
+        </main>
+      </div>
+      <div class="col-2">
+        <ol></ol>
+      </div>
+    </div>
+
     <script>
-      let n = Math.floor(Math.random() * 20) + 1;
-      const inputEl = document.getElementsByTagName("input")[0];
+      let n = Math.floor(Math.random() * 100) + 1;
+      const inputEl = document.getElementsByTagName("input")[1];
       const messageEl = document.getElementsByClassName("message")[0];
       const scoreEl = document.getElementsByClassName("score")[0];
       const buttons = document.getElementsByTagName("button");
       const highEl = document.getElementsByClassName("highscore")[0];
+      const NameEl = document.getElementsByTagName("input")[0];
 
       function checkNumber() {
         const inputValue = Number(inputEl.value);
@@ -41,44 +62,83 @@
         const highNumber = Number(highEl.innerHTML);
 
         if (isNaN(inputValue)) {
-          messageEl.innerHTML = "Toogoo oruulna uu?";
+          messageEl.innerHTML = "Тоогоо оруулна уу??";
         } else {
           if (inputValue > n) {
             if (scoreNumber - 1 === 0) {
               afterLose();
             } else {
-              messageEl.innerHTML = "Ih baina";
+              messageEl.innerHTML = "Их байна";
             }
             scoreEl.innerHTML = scoreNumber - 1;
           } else if (inputValue < n) {
             if (scoreNumber - 1 === 0) {
               afterLose();
             } else {
-              messageEl.innerHTML = "Baga baina";
+              messageEl.innerHTML = "Бага байна";
             }
             scoreEl.innerHTML = scoreNumber - 1;
           } else {
-            messageEl.innerHTML = "Zov taalaa";
+            messageEl.innerHTML = "Баяр хүргэе";
             buttons[1].style.display = "none";
             document.body.style.backgroundColor = "#60b347";
+            NameScore = document.createElement("li");
+            NameScore.innerHTML = NameEl.value + "     " + scoreNumber;
+            NameScore.style.backgroundColor =
+              document.getElementById("TeamSelect").value;
+            document.getElementsByTagName("ol")[0].append(NameScore);
+            const TeamEl = document.getElementById("TeamSelect").value;
+            console.log(TeamEl);
             if (scoreNumber > highNumber) {
               highEl.innerHTML = scoreNumber;
+            }
+
+            let onoo = document.getElementsByTagName("li");
+
+            console.log(onoo[0].innerHTML);
+
+            for (let i = 0; i < onoo.length - 1; i++) {
+              for (let j = i + 1; j < onoo.length; j++) {
+                let urt2 = onoo[j].innerHTML.length;
+                let k2 =
+                  Number(onoo[j].innerHTML[urt2 - 2]) * 10 +
+                  Number(onoo[j].innerHTML[urt2 - 1]);
+
+                let urt = onoo[j - 1].innerHTML.length;
+                let k =
+                  Number(onoo[j - 1].innerHTML[urt - 2]) * 10 +
+                  Number(onoo[j - 1].innerHTML[urt - 1]);
+
+                if (k < k2) {
+                  let temp = onoo[j - 1].innerHTML;
+                  onoo[j - 1].innerHTML = onoo[j].innerHTML;
+                  onoo[j].innerHTML = temp;
+                }
+              }
             }
           }
         }
       }
 
       function afterLose() {
-        messageEl.innerHTML = "Ta hojigdloo";
+        messageEl.innerHTML = "Та хожигдло";
         buttons[1].style.display = "none";
+        NameScore = document.createElement("li");
+        NameScore.innerHTML = NameEl.value + "     " + scoreNumber;
+        NameScore.style.backgroundColor =
+          document.getElementById("TeamSelect").value;
+        document.getElementsByTagName("ol")[0].append(NameScore);
+        const TeamEl = document.getElementById("TeamSelect").value;
+        console.log(TeamEl);
       }
 
       function resetGame() {
-        n = Math.floor(Math.random() * 20) + 1;
+        n = Math.floor(Math.random() * 100) + 1;
         scoreEl.innerHTML = 20;
         inputEl.value = "";
+        NameEl.value = "";
         document.body.style.backgroundColor = "#222";
-        messageEl.innerHTML = "Taaj ehleerei...";
+        messageEl.innerHTML = "Тааж эхлээрэй!";
         buttons[1].style.display = "block";
       }
     </script>
