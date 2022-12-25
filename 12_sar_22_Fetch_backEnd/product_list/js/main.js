@@ -1,4 +1,7 @@
 const squaretEl = document.getElementById("square");
+const inputEl = document.getElementById('input');
+const button = document.getElementById('btn');
+
 let n = 10;
 fetch("https://dummyjson.com/products")
   .then((res) => {
