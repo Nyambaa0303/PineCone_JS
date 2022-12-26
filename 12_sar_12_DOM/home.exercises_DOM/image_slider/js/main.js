@@ -42,7 +42,7 @@ function button5(){
     btn2.style.cssText = "width: 120px; transition:1s";
     btn3.style.cssText = "width: 120px; transition:1s";
     btn4.style.cssText = "width: 120px; transition:1s";
-    btn5.style.cssText = "width: 450px; transition:1s; transition-delay: 0.5s";
+    btn5.style.cssText = "width: 450px; transition:1s";
 };
 
 

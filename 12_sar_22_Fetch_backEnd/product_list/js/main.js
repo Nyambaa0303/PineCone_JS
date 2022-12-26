@@ -2,10 +2,10 @@ const squaretEl = document.getElementById("square");
 const inputEl = document.getElementById('input');
 const button = document.getElementById('btn');
 
-let n = 10;
+let n = 9;
 fetch("https://dummyjson.com/products")
   .then((res) => {
-    if (res.ok) {
+    if (res.ok) { 
       return res.json();
     }
   })
