@@ -29,11 +29,12 @@
             (item1, index1) =>
               index1 >= (page - 1) * size && index1 < page * size
           );
+          console.log(filteredList);
           const postsHTML = filteredList
             .map(
               (item) => `<li>
                             <a href="single.html?id=${item1.id}">
-                                ${item1}
+                                ${item.title}
                             </a>
                         </li>`
             )
