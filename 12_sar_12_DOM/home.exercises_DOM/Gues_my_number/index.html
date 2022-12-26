@@ -12,6 +12,7 @@
       <div class="col-10">
         <header>
           <h1>Тоог таа!</h1>
+          <div class="prizePool"></div>
           <p class="between">(1 ээс 100 хооронд)</p>
           <button class="btn again" onclick="resetGame()">Шинээр эхлэх!</button>
           <div class="number">?</div>
@@ -55,7 +56,7 @@
       const buttons = document.getElementsByTagName("button");
       const highEl = document.getElementsByClassName("highscore")[0];
       const NameEl = document.getElementsByTagName("input")[0];
-
+      const prizeEl = document.getElementsByClassName("PrizePool")[0];
       function checkNumber() {
         const inputValue = Number(inputEl.value);
         const scoreNumber = Number(scoreEl.innerHTML);
@@ -87,6 +88,7 @@
             NameScore.style.backgroundColor =
               document.getElementById("TeamSelect").value;
             document.getElementsByTagName("ol")[0].append(NameScore);
+            prizeEl.innerHTML += 500;
             const TeamEl = document.getElementById("TeamSelect").value;
             console.log(TeamEl);
             if (scoreNumber > highNumber) {
