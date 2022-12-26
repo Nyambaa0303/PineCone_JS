@@ -15,12 +15,10 @@
       fetch(`https://dummyjson.com/posts/${id}`)
         .then((res) => res.json())
         .then((data) => {
-          // const articleHtml = data.posts[0].title;
-          // console.log(hun);
           const articleHtml = `<h1>${data.title}</h1>
           <div>
               ${data.body}
-          </div>`;
+          <div>`;
           document.getElementById("article").innerHTML = articleHtml;
         });
     </script>

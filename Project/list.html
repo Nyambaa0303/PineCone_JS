@@ -32,9 +32,9 @@
           console.log(filteredList);
           const postsHTML = filteredList
             .map(
-              (item) => `<li>
+              (item1) => `<li>
                             <a href="single.html?id=${item1.id}">
-                                ${item.title}
+                                ${item1.title}
                             </a>
                         </li>`
             )
@@ -43,6 +43,7 @@
 
           document.getElementById("list").innerHTML = postsHTML;
         });
+      console.log();
     </script>
   </body>
 </html>

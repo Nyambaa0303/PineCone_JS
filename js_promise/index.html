@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const undaandGuilgehAmlalt = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const undaaBaival = true;
+          if (undaaBaival) {
+            resolve("Mai undaagaa av");
+          } else {
+            reject("Undaa alga");
+          }
+        }, 3000);
+      });
+
+      console.log(undaandGuilgehAmlalt);
+
+      undaandGuilgehAmlalt
+        .then((data) => {
+          console.info(data);
+          // console.table({message: data });
+        })
+        .catch((err) => {
+          console.error(err);
+        })
+        .finally(() => {
+          console.log("undaanii asuudal shiidegdsen");
+        });
+
+      console.log("after promise");
+    </script>
+  </body>
+</html>
