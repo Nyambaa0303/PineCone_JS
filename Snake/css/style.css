@@ -1,0 +1,15 @@
+#area {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: 200px;
+}
+.position {
+  width: 20px;
+  height: 20px;
+  background-color: brown;
+  position: absolute;
+  border-radius: 6px;
+}
