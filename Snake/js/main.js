@@ -3,14 +3,47 @@ const positions = [
   { x: 2, y: 1 },
   { x: 3, y: 1 },
 ];
-const newPositions = [];
 const area = document.getElementById("area");
 let direction = "right";
+let btnUp = document.getElementById('bntUp');
+let btnDown = document.getElementById('bntDown');
+let btnRight = document.getElementById('bntRight');
+let btnLeft = document.getElementById('bntLeft');
 
+document.addEventListener('keyup', (event) => {
+  switch (event.key) {
+    case 'ArrowDown':
+     changeDirection('down');
+      break;
+    case 'ArrowUp':
+      changeDirection('up');
+      break;
+    case 'ArrowLeft':
+      changeDirection('left');
+      break;
+    case 'ArrowRight':
+      changeDirection('right');
+      break;
+  }
+})
+
+function changeDirection(value) {
+  if (direction === 'up' || direction === 'down') {
+    if (value === 'right' || value === 'left') {
+      direction = value;
+    }
+  }else if(direction === 'right' || direction === 'left'){
+    if(value === 'up' || value === 'down') {
+      direction = value;
+    }
+  }
+}
 function goLeft() {
+
+  const newPositions = [];
   newPositions.push({
     y: positions[0].y,
-    x: positions[0].x === 0 ? 29 : positions[0].x - 1,
+    x: positions[0].x === 0 ? 9 : positions[0].x - 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
@@ -20,9 +53,11 @@ function goLeft() {
 }
 
 function goRight() {
+
+  const newPositions = [];
   newPositions.push({
     y: positions[0].y,
-    x: positions[0].x === 29 ? 0 : positions[0].x + 1,
+    x: positions[0].x === 9 ? 0 : positions[0].x + 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
@@ -32,9 +67,11 @@ function goRight() {
 }
 
 function goUp() {
+
+  const newPositions = [];
   newPositions.push({
     x: positions[0].x,
-    y: positions[0].y === 0 ? 29 : positions[0].x - 1,
+    y: positions[0].y === 0 ? 9 : positions[0].y - 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
@@ -44,9 +81,11 @@ function goUp() {
 }
 
 function goDown() {
+
+  const newPositions = [];
   newPositions.push({
     x: positions[0].x,
-    y: positions[0].y === 29 ? 0 : positions[0].x + 1,
+    y: positions[0].y === 9 ? 0 : positions[0].y + 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
