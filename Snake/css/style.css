@@ -1,15 +1,50 @@
 #area {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 600px;
+  height: 400px;
   background-color: antiquewhite;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 30px;
+}
+body{
+  background-color: whitesmoke;
 }
 .position {
   width: 20px;
   height: 20px;
-  background-color: brown;
+  background-color: gray;
   position: absolute;
   border-radius: 6px;
+}
+.leftRight{
+  display: flex;
+}
+.Buttons{
+  width: 250px;
+  margin: auto ;
+  padding-top: 30px;
+}
+.UpTop{
+  width: 80px;
+  height: 80px;
+}
+#btn{
+  width: 80px;
+  height: 80px;
+  background-color: antiquewhite;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+i{
+  font-size: 30px;
+  color: gray;
+}
+.food{
+  position: absolute;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.position:nth-of-type(2){
+  background-color: rgb(185, 99, 99);
 }

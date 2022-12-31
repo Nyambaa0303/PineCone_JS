@@ -1,14 +1,6 @@
-let positions = [
-  { x: 1, y: 1 },
-  { x: 2, y: 1 },
-  { x: 3, y: 1 },
-];
+let positions =  initial
 const area = document.getElementById("area");
 let direction = "right";
-let btnUp = document.getElementById('bntUp');
-let btnDown = document.getElementById('bntDown');
-let btnRight = document.getElementById('bntRight');
-let btnLeft = document.getElementById('bntLeft');
 
 document.addEventListener('keyup', (event) => {
   switch (event.key) {
@@ -43,7 +35,7 @@ function goLeft() {
   const newPositions = [];
   newPositions.push({
     y: positions[0].y,
-    x: positions[0].x === 0 ? 9 : positions[0].x - 1,
+    x: positions[0].x === 0 ? 29 : positions[0].x - 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
@@ -57,7 +49,7 @@ function goRight() {
   const newPositions = [];
   newPositions.push({
     y: positions[0].y,
-    x: positions[0].x === 9 ? 0 : positions[0].x + 1,
+    x: positions[0].x === 29 ? 0 : positions[0].x + 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
@@ -71,7 +63,7 @@ function goUp() {
   const newPositions = [];
   newPositions.push({
     x: positions[0].x,
-    y: positions[0].y === 0 ? 9 : positions[0].y - 1,
+    y: positions[0].y === 0 ? 19 : positions[0].y - 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
@@ -85,7 +77,7 @@ function goDown() {
   const newPositions = [];
   newPositions.push({
     x: positions[0].x,
-    y: positions[0].y === 9 ? 0 : positions[0].y + 1,
+    y: positions[0].y === 19 ? 0 : positions[0].y + 1,
   });
 
   for (let i = 0; i < positions.length - 1; i++) {
